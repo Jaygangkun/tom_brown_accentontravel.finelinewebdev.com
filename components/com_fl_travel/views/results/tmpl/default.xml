@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="FL Travel Search Results">
+		
+  	</layout>
+  	<fields name="params">
+    	<fieldset name="options" label="Search Options">
+      		<!-- <field 
+ 			  	name="item_category_id" 
+	   			type="sql" 
+	   			default="" 
+	   			label="Select a Category" 
+	   			query="SELECT 0 AS value, 'Show All' AS item_category_id UNION ALL SELECT item_category_id AS value, `name` AS item_category_id FROM #__fl_items_category">
+ 			</field> -->
+ 			
+			<!-- <field name="top_title" type="text" default="" description="Title that will be displayed on top of page." label="Page Title" size="255"></field>
+		
+			<field name="search_params" type="text" default="" description="Example: state=de&amp;price=100000-200000&amp;prop3=value3" label="Search Params" size="100"></field>
+    	
+			<field name="order_by" type="text" default="" description="Examples: date ASC, price DESC, RANDOM" label="Order By" size="100"></field>
+			
+			<field name="limit" type="text" default="30" description="Number per page. If no paging, total number." label="Number of Results" size="100"></field>
+
+      		<field name="featured_only" type="list" default="0" description="" label="Only Show Featured Items?">
+		        <option value="0">No</option>
+		        <option value="1">Yes</option>
+  			</field> -->
+    	</fieldset>
+  	</fields>
+</metadata>

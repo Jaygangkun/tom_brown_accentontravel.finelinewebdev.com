@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>System - Bootstrap 3</name>
+	<author>Fine Line Websites</author>
+	<creationDate>2014-07-30</creationDate>
+	<copyright>Copyright (C) 2010 - 2014 Fine Line Websites &amp; IT Consulting. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@finelineit.com</authorEmail>
+	<authorUrl>www.finelinewebsites.com</authorUrl>
+	<version>3.1.1</version>
+	<description>System plugin that removes bootstrap 2 on the frontend only.</description>
+	<files>
+		<filename plugin="bootstrap3">bootstrap3.php</filename>
+	</files>
+</extension>
+

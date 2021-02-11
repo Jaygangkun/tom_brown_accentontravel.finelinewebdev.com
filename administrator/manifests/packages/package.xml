@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.6">
+    <name>Qlue 404</name>
+    <creationDate>April 2011</creationDate>
+    <author>Aaron Harding</author>
+    <authorEmail>support@qlue.info</authorEmail>
+    <packagename>Qlue 404</packagename>
+    <version>3.0.0</version>
+    <url>http://www.qlue.co.uk</url>
+    <description>COM_QLUE404_DESCRIPTION</description>
+    <files folder="packages">
+        <file type="component" id="com_qlue404" >com_qlue404.zip</file>
+        <file type="plugin" id="plg_qlue404" group="system">plg_system_qlue404.zip</file>
+    </files>
+</extension>

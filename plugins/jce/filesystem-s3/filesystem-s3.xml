@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<extension version="2.5" type="plugin" group="jce" method="upgrade">
+    <name>plg_jce_filesystem_s3</name>
+    <version>2.0.2</version>
+    <creationDate>01-03-2017</creationDate>
+    <author>Ryan Demmer</author>
+    <authorEmail>info@joomlacontenteditor.net</authorEmail>
+    <authorUrl>http://www.joomlacontenteditor.net/</authorUrl>
+    <copyright>Copyright (C) 2006 - 2016 Ryan Demmer. All rights reserved</copyright>
+    <license>GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html</license>
+    <description>PLG_JCE_FILESYSTEM_S3_XML_DESC</description>
+    <files folder="plugins/jce/filesystem-s3">
+        <file plugin="filesystem-s3">filesystem-s3.php</file>
+        <folder>s3</folder>
+    </files>
+    <languages folder="administrator/language/en-GB">
+        <language tag="en-GB">en-GB.plg_jce_filesystem-s3.ini</language>
+        <language tag="en-GB">en-GB.plg_jce_filesystem-s3.sys.ini</language>
+    </languages>
+
+    <params group="s3" parent="filesystem">
+        <param name="accesskey" type="text" default="" size="50" label="PLG_JCE_FILESYSTEM_S3_ACCESSKEY" description="PLG_JCE_FILESYSTEM_S3_ACCESSKEY_DESC" />
+        <param name="secretkey" type="password" default="" size="50" label="PLG_JCE_FILESYSTEM_S3_SECRETKEY" description="PLG_JCE_FILESYSTEM_S3_SECRETKEY_DESC" />
+        <param name="credentials_profile" type="text" default="" label="PLG_JCE_FILESYSTEM_S3_CREDENTIALS_PROFILE" description="PLG_JCE_FILESYSTEM_S3_CREDENTIALS_PROFILE_DESC" />
+        <param name="bucket" type="text" default="" size="50" label="PLG_JCE_FILESYSTEM_S3_BUCKET" description="PLG_JCE_FILESYSTEM_S3_BUCKET_DESC" />
+        <param name="cname" type="text" default="" size="50" label="PLG_JCE_FILESYSTEM_S3_CNAME" description="PLG_JCE_FILESYSTEM_S3_CNAME_DESC" />
+        <param name="timeout" type="text" default="3600" label="PLG_JCE_FILESYSTEM_S3_TIMEOUT" description="PLG_JCE_FILESYSTEM_S3_TIMEOUT_DESC" />
+        <param name="ssl" type="list" default="" label="PLG_JCE_FILESYSTEM_S3_SSL" description="PLG_JCE_FILESYSTEM_S3_SSL_DESC">
+            <option value="">WF_OPTION_NOT_SET</option>	
+            <option value="1">WF_OPTION_YES</option>
+            <option value="0">WF_OPTION_NO</option>
+        </param>
+        <param name="endpoint" type="list" size="50" default="" label="PLG_JCE_FILESYSTEM_S3_ENDPOINT" description="PLG_JCE_FILESYSTEM_S3_ENDPOINT_DESC">
+            <option value="">WF_OPTION_NOT_SET</option>
+            <option value="s3.amazonaws.com">US Standard</option>
+            <option value="s3-us-west-2.amazonaws.com">US West (Oregon) Region</option>
+            <option value="s3-us-west-1.amazonaws.com">US West (Northern California) Region</option>
+            <option value="s3-eu-west-1.amazonaws.com">EU (Ireland) Region</option>
+            <option value="s3-ap-southeast-1.amazonaws.com">Asia Pacific (Singapore) Region</option>
+            <option value="s3-ap-southeast-2.amazonaws.com">Asia Pacific (Sydney) Region</option>
+            <option value="s3-ap-northeast-1.amazonaws.com">Asia Pacific (Tokyo) Region</option>
+            <option value="s3-sa-east-1.amazonaws.com">South America (Sao Paulo) Region</option>
+        </param>
+        <param name="acl" type="list" default="" label="PLG_JCE_FILESYSTEM_S3_ACL" description="PLG_JCE_FILESYSTEM_S3_ACL_DESC">
+            <option value="">WF_OPTION_NOT_SET</option>
+            <option value="private">PLG_JCE_FILESYSTEM_S3_ACL_PRIVATE</option>
+            <option value="public-read">PLG_JCE_FILESYSTEM_S3_ACL_PUBLIC_READ</option>
+            <option value="public-read-write">PLG_JCE_FILESYSTEM_S3_ACL_PUBLIC_READ_WRITE</option>
+            <option value="authenticated-read">PLG_JCE_FILESYSTEM_S3_ACL_AUTHENTICATED_READ</option>
+        </param>
+        <param name="allow_root" type="list" default="" label="WF_PARAM_ALLOW_ROOT" description="WF_PARAM_ALLOW_ROOT_DESC">
+            <option value="">WF_OPTION_NOT_SET</option>
+            <option value="1">WF_OPTION_YES</option>
+            <option value="0">WF_OPTION_NO</option>
+        </param>
+    </params>
+
+    <updateservers>
+      <server type="extension" priority="1" name="JCE Amazon S3 Filesystem"><![CDATA[https://www.joomlacontenteditor.net/index.php?option=com_updates&view=update&format=xml&file=plg_jce_filesystem_s3.xml]]></server>
+    </updateservers>
+</extension>

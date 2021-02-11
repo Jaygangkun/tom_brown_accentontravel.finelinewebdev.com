@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="FL Items Detail">
+   
+  </layout>
+   
+   <fields name="params">
+      <fieldset name="options" label="Item Display Options">
+        <field 
+          name="item_id" 
+          type="sql" 
+          default="" 
+          label="Select a Category" 
+          query="SELECT 0 AS value, 'Show All' AS item_id UNION ALL SELECT item_id AS value, `name` FROM #__fl_items">
+      </field>
+          
+      </fieldset>
+   </fields>
+  
+</metadata>

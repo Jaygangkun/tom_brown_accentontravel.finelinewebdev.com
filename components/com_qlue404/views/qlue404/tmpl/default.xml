@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_QLUE404_VIEW_DEFAULT_TITLE">
+		<message>COM_QLUE404_VIEW_DEFAULT_DESC</message>
+	</layout>
+	
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_qlue404/models/fields">
+			<field name="id" type="error" label="COM_QLUE404_MENU_CUSTOM" description="COM_QLUE404_MENU_CUSTOM_DESC" required="true" />
+		</fieldset>
+	</fields>
+</metadata>

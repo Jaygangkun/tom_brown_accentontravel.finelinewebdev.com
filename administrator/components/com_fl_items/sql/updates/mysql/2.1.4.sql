@@ -1,0 +1,1 @@
+ALTER TABLE `#__fl_items_category` ADD COLUMN `isHeader`  tinyint(1) NOT NULL DEFAULT 0 AFTER `isHiddenParent`;

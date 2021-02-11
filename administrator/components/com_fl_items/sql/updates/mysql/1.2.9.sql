@@ -1,0 +1,1 @@
+ALTER TABLE `#__fl_items_properties` ADD COLUMN `allowUserEdit` tinyint NOT NULL DEFAULT 1;

@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="system">
+	<name>plg_system_interext</name>
+	<author>Chris Burgess</author>
+	<creationDate>February 2012</creationDate>
+	<copyright>Copyright (C) 2011 AcuIT. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>chris.burgess@acuit.com.au</authorEmail>
+	<authorUrl>www.acuit.com.au</authorUrl>
+	<version>2.0</version>
+	<description>PLG_INTEREXT_DESCRIPTION</description>
+	<files>
+		<filename plugin="interext">interext.php</filename>
+		<filename>index.html</filename>
+		<folder>formfields</folder>
+		<folder>jQuery</folder>
+		<folder>mootools</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_interext.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_interext.sys.ini</language>
+    </languages>
+	<config addfieldpath="/plugins/system/interext/formfields">
+		<fields name="params">
+			<fieldset name="basic">
+				
+				<field name="displayTime" type="list" default="0" label="PLG_INTEREXT_FIELD_DISPLAYTIME_LABEL" description="PLG_INTEREXT_FIELD_DISPLAYTIME_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="mootools" label="PLG_INTEREXT_FIELDSET_MOOTOOLS_LABEL">
+			
+				<field name="mootoolsAction" type="list" default="0" label="PLG_INTEREXT_FIELD_MOOTOOLSACTION_LABEL" description="PLG_INTEREXT_FIELD_MOOTOOLSACTION_DESC">
+					<option value="0">PLG_INTEREXT_OPT_DONOTHING</option>
+					<option value="1">PLG_INTEREXT_OPT_REMOVEALL</option>
+					<option value="2">PLG_INTEREXT_OPT_ONLYONSELECTED</option>
+					<option value="3">PLG_INTEREXT_OPT_ALLEXCEPTSELECTED</option>
+				</field>
+				<field name="mootoolsMenuItems" type="menuitem" multiple="true" size="25" label="PLG_INTEREXT_FIELD_MOOTOOLSMENUITEMS_LABEL" description="PLG_INTEREXT_FIELD_MOOTOOLSMENUITEMS_DESC" />
+				<field name="mootoolsLocation" type="list" default="0" label="PLG_INTEREXT_FIELD_MOOTOOLSLOCATION_LABEL" description="PLG_INTEREXT_FIELD_MOOTOOLSLOCATION_DESC" >
+					<option value="0">PLG_INTEREXT_OPT_MOOTOOLSLOCATION_JOOMLA</option>
+					<option value="1">PLG_INTEREXT_OPT_MOOTOOLSLOCATION_INTEREXT</option>
+					<option value="2">Google</option>
+				</field>
+				<field name="mootoolsVersion" type="list" default="1.4.5" label="PLG_INTEREXT_FIELD_MOOTOOLSVERSION_LABEL" description="PLG_INTEREXT_FIELD_MOOTOOLSVERSION_DESC" >
+					<option value="1.4.9">1.4.9</option>
+					<option value="1.4.8">1.4.8</option>
+					<option value="1.4.7">1.4.7</option>
+					<option value="1.4.6">1.4.6</option>
+					<option value="1.4.5">1.4.5</option>
+					<option value="1.4.4">1.4.4</option>
+					<option value="1.4.3">1.4.3</option>
+					<option value="1.4.2">1.4.2</option>
+					<option value="1.4.1">1.4.1</option>
+					<option value="1.4.0">1.4.0</option>
+					<option value="1.3.2">1.3.2</option>
+					<option value="1.3.1">1.3.1</option>
+					<option value="1.3.0">1.3.0</option>
+					<option value="1.2.5">1.2.5</option>
+					<option value="1.2.4">1.2.4</option>
+					<option value="1.2.3">1.2.3</option>
+					<option value="1.2.2">1.2.2</option>
+					<option value="1.2.1">1.2.1</option>
+					<option value="1.1.2">1.1.2</option>
+					<option value="1.1.1">1.1.1</option>
+				</field>
+				<field name="mootoolsCompressed" type="list" default="1" label="PLG_INTEREXT_FIELD_MOOTOOLSCOMPRESSED_LABEL" description="PLG_INTEREXT_FIELD_MOOTOOLSCOMPRESSED_DESC" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="mootoolsException" type="list" default="0" label="PLG_INTEREXT_FIELD_MOOTOOLSEXCEPTIONS_LABEL" description="PLG_INTEREXT_FIELD_MOOTOOLSEXCEPTIONS_DESC">
+					<option value="0">PLG_INTEREXT_OPT_MOOTOOLSEXCEPTION_NONE</option>
+					<option value="1">PLG_INTEREXT_OPT_MOOTOOLSEXCEPTION_USER</option>
+					<option value="2">PLG_INTEREXT_OPT_MOOTOOLSEXCEPTION_EDIT</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="mootoolsMore" label="PLG_INTEREXT_FIELDSET_MOOTOOLSMORE_LABEL">
+			
+				<field name="mootoolsMoreAction" type="list" default="0" label="PLG_INTEREXT_FIELD_MOOTOOLSMOREACTION_LABEL" description="PLG_INTEREXT_FIELD_MOOTOOLSMOREACTION_DESC">
+					<option value="0">PLG_INTEREXT_OPT_DONOTHING</option>
+					<option value="1">PLG_INTEREXT_OPT_REMOVEALL</option>
+					<option value="2">PLG_INTEREXT_OPT_ONLYONSELECTED</option>
+					<option value="3">PLG_INTEREXT_OPT_ALLEXCEPTSELECTED</option>
+				</field>
+				<field name="mootoolsMoreMenuItems" type="menuitem" multiple="true" size="25" label="PLG_INTEREXT_FIELD_MOOTOOLSMOREMENUITEMS_LABEL" description="PLG_INTEREXT_FIELD_MOOTOOLSMOREMENUITEMS_DESC" />
+				<field name="mootoolsMoreOption" type="list" default="0" label="PLG_INTEREXT_FIELD_MOOTOOLSMOREOPTION_LABEL" description="PLG_INTEREXT_FIELD_MOOTOOLSMOREOPTION_DESC" >
+					<option value="0">PLG_INTEREXT_OPT_MOOTOOLSMOREOPTION_JOOMLACOMP</option>
+					<option value="1">PLG_INTEREXT_OPT_MOOTOOLSMOREOPTION_JOOMLAUNCOMP</option>
+					<option value="2">PLG_INTEREXT_OPT_MOOTOOLSMOREOPTION_CUSTOM</option>
+				</field>
+				<field name="mootoolsMoreCustomURL" type="text" size="40" label="PLG_INTEREXT_FIELD_MOOTOOLSMORECUSTOMURL_LABEL" description="PLG_INTEREXT_FIELD_MOOTOOLSMORECUSTOMURL_DESC" />
+				<field name="mootoolsMoreException" type="list" default="0" label="PLG_INTEREXT_FIELD_MOOTOOLSMOREEXCEPTIONS_LABEL" description="PLG_INTEREXT_FIELD_MOOTOOLSMOREEXCEPTIONS_DESC">
+					<option value="0">PLG_INTEREXT_OPT_MOOTOOLSMOREEXCEPTION_NONE</option>
+					<option value="1">PLG_INTEREXT_OPT_MOOTOOLSMOREEXCEPTION_USER</option>
+					<option value="2">PLG_INTEREXT_OPT_MOOTOOLSMOREEXCEPTION_EDIT</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="jLibOpts" label="PLG_INTEREXT_FIELDSET_JOOMLALIBS_LABEL">
+			
+				<field name="stripJoomlaMootoolsLibs" type="list" default="0" label="PLG_INTEREXT_FIELD_STRIPJOOMLAMOOTOOLSLIBS_LABEL" description="PLG_INTEREXT_FIELD_STRIPJOOMLAMOOTOOLSLIBS_DESC" >
+					<option value="0">PLG_INTEREXT_OPT_NEVER</option>
+					<option value="1">PLG_INTEREXT_OPT_ALWAYS</option>
+					<option value="2">PLG_INTEREXT_OPT_IFNOMOOTOOLS</option>
+				</field>
+				
+				<field name="stripMootoolsJCaption" type="list" default="0" label="PLG_INTEREXT_FIELD_STRIPMOOTOOLSJCAPTION_LABEL" description="PLG_INTEREXT_FIELD_STRIPMOOTOOLSJCAPTION_DESC" >
+					<option value="0">PLG_INTEREXT_OPT_NEVER</option>
+					<option value="1">PLG_INTEREXT_OPT_ALWAYS</option>
+					<option value="2">PLG_INTEREXT_OPT_IFNOMOOTOOLS</option>
+				</field>
+			
+				<field name="stripMootoolsJTooltip" type="list" default="0" label="PLG_INTEREXT_FIELD_STRIPMOOTOOLSJTOOLTIP_LABEL" description="PLG_INTEREXT_FIELD_STRIPMOOTOOLSJTOOLTIP_DESC" >
+					<option value="0">PLG_INTEREXT_OPT_NEVER</option>
+					<option value="1">PLG_INTEREXT_OPT_ALWAYS</option>
+					<option value="2">PLG_INTEREXT_OPT_IFNOMOOTOOLSMORE</option>
+				</field>
+			
+			</fieldset>
+			
+			<fieldset name="jQuery" label="PLG_INTEREXT_FIELDSET_JQUERY_LABEL">
+			
+				<field name="jQueryAction" type="list" default="0" label="PLG_INTEREXT_FIELD_JQUERYACTION_LABEL" description="PLG_INTEREXT_FIELD_JQUERYACTION_DESC">
+					<option value="0">PLG_INTEREXT_OPT_DONOTHING</option>
+					<option value="1">PLG_INTEREXT_OPT_REMOVEALL</option>
+					<option value="2">PLG_INTEREXT_OPT_ONLYONSELECTED</option>
+					<option value="3">PLG_INTEREXT_OPT_ALLEXCEPTSELECTED</option>
+				</field>
+				<field name="jQueryMenuItems" type="menuitem" multiple="true" size="25" label="PLG_INTEREXT_FIELD_JQUERYMENUITEMS_LABEL" description="PLG_INTEREXT_FIELD_JQUERYMENUITEMS_DESC" />
+				<field name="jQueryVersion" type="list" default="1.6.4" label="PLG_INTEREXT_FIELD_JQUERYVERSION_LABEL" description="PLG_INTEREXT_FIELD_JQUERYVERSION_DESC" >
+					<option value="1.7.5">1.7.5</option>
+					<option value="1.7.4">1.7.4</option>
+					<option value="1.7.3">1.7.3</option>
+					<option value="1.7.2">1.7.2</option>
+					<option value="1.7.1">1.7.1</option>
+					<option value="1.7">1.7</option>
+					<option value="1.6.4">1.6.4</option>
+					<option value="1.6.3">1.6.3</option>
+					<option value="1.6.2">1.6.2</option>
+					<option value="1.6.1">1.6.1</option>
+					<option value="1.6">1.6</option>
+					<option value="1.5.2">1.5.2</option>
+					<option value="1.5.1">1.5.1</option>
+					<option value="1.5">1.5</option>
+					<option value="1.4.4">1.4.4</option>
+					<option value="1.4.3">1.4.3</option>
+					<option value="1.4.2">1.4.2</option>
+					<option value="1.4.1">1.4.1</option>
+					<option value="1.4">1.4</option>
+				</field>
+				<field name="jQueryServer" type="list" default="0" label="PLG_INTEREXT_FIELD_JQUERYSERVER_LABEL" description="PLG_INTEREXT_FIELD_JQUERYSERVER_DESC" >
+					<option value="0">PLG_INTEREXT_OPT_JQUERYSERVER_LOCAL</option>
+					<option value="1">Google</option>
+					<option value="2">jQuery</option>
+					<option value="3">Microsoft</option>
+				</field>
+				<field name="jQueryFileType" type="list" default="0" label="PLG_INTEREXT_FIELD_JQUERYFILETYPE_LABEL" description="PLG_INTEREXT_FIELD_JQUERYFILETYPE_DESC" >
+					<option value="0">PLG_INTEREXT_OPT_JQUERYFILETYPE_MINIFIED</option>
+					<option value="1">PLG_INTEREXT_OPT_JQUERYFILETYPE_UNCOMPRESSED</option>
+				</field>
+				<field name="jQueryNoConflict" type="list" default="1" label="PLG_INTEREXT_FIELD_JQUERYNOCONFLICT_LABEL" description="PLG_INTEREXT_FIELD_JQUERYNOCONFLICT_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="group_opt" label="PLG_INTEREXT_FIELDSET_GROUPOPTIONS_LABEL">
+			
+				<field name="checkForOverlaps" type="list" default="1" label="PLG_INTEREXT_FIELD_CHECKFOROVERLAP_LABEL" description="PLG_INTEREXT_FIELD_CHECKFOROVERLAP_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			
+			</fieldset>
+			
+			<fieldset name="group1" label="PLG_INTEREXT_FIELDSET_GROUP1_LABEL">
+			
+				<field name="group1exists" type="hidden" default="" />
+				<field name="group1assignment" type="iextgroupassignment" />
+				<field name="group1menuitems" type="iextmenuitems"/>
+				<field name="group1action" type="iextgroupaction" default="0" />
+				<field name="group1position" type="iextgroupposition" default="0" />
+				
+				<field name="group1res1" index="1" type="iextresource" default="" filter="raw"/>
+				<field name="group1res1type" type="iextrestype" default="0" />
+				<field name="group1res2" index="2" type="iextresource" default="" filter="raw" />
+				<field name="group1res2type" type="iextrestype" default="0" />
+				<field name="group1res3" index="3" type="iextresource" default="" filter="raw" />
+				<field name="group1res3type" type="iextrestype" default="0" />
+				<field name="group1res4" index="4" type="iextresource" default="" filter="raw" />
+				<field name="group1res4type" type="iextrestype" default="0" />
+				<field name="group1res5" index="5" type="iextresource" default="" filter="raw" />
+				<field name="group1res5type" type="iextrestype" default="0" />
+				
+			</fieldset>
+			
+			<fieldset name="group2" label="PLG_INTEREXT_FIELDSET_GROUP2_LABEL">
+			
+				<field name="group2exists" type="hidden" default="" />
+				<field name="group2assignment" type="iextgroupassignment" />
+				<field name="group2menuitems" type="iextmenuitems" />
+				<field name="group2action" type="iextgroupaction" default="0" />
+				<field name="group2position" type="iextgroupposition" default="0" />
+				
+				<field name="group2res1" index="1" type="iextresource" default="" filter="raw" />
+				<field name="group2res1type" type="iextrestype" default="0" />
+				<field name="group2res2" index="2" type="iextresource" default="" filter="raw" />
+				<field name="group2res2type" type="iextrestype" default="0" />
+				<field name="group2res3" index="3" type="iextresource" default="" filter="raw" />
+				<field name="group2res3type" type="iextrestype" default="0" />
+				<field name="group2res4" index="4" type="iextresource" default="" filter="raw" />
+				<field name="group2res4type" type="iextrestype" default="0" />
+				<field name="group2res5" index="5" type="iextresource" default="" filter="raw" />
+				<field name="group2res5type" type="iextrestype" default="0" />
+			
+			</fieldset>
+			
+			<fieldset name="group3" label="PLG_INTEREXT_FIELDSET_GROUP3_LABEL">
+			
+				<field name="group3exists" type="hidden" default="" />
+				<field name="group3assignment" type="iextgroupassignment" />
+				<field name="group3menuitems" type="iextmenuitems" />
+				<field name="group3action" type="iextgroupaction" default="0" />
+				<field name="group3position" type="iextgroupposition" default="0" />
+				
+				<field name="group3res1" index="1" type="iextresource" default="" filter="raw" />
+				<field name="group3res1type" type="iextrestype" default="0" />
+				<field name="group3res2" index="2" type="iextresource" default="" filter="raw" />
+				<field name="group3res2type" type="iextrestype" default="0" />
+				<field name="group3res3" index="3" type="iextresource" default="" filter="raw" />
+				<field name="group3res3type" type="iextrestype" default="0" />
+				<field name="group3res4" index="4" type="iextresource" default="" filter="raw" />
+				<field name="group3res4type" type="iextrestype" default="0" />
+				<field name="group3res5" index="5" type="iextresource" default="" filter="raw" />
+				<field name="group3res5type" type="iextrestype" default="0" />
+			
+			</fieldset>
+			
+			<fieldset name="group4" label="PLG_INTEREXT_FIELDSET_GROUP4_LABEL">
+			
+				<field name="group4exists" type="hidden" default="" />
+				<field name="group4assignment" type="iextgroupassignment" />
+				<field name="group4menuitems" type="iextmenuitems" />
+				<field name="group4action" type="iextgroupaction" default="0" />
+				<field name="group4position" type="iextgroupposition" default="0" />
+				
+				<field name="group4res1" index="1" type="iextresource" default="" filter="raw" />
+				<field name="group4res1type" type="iextrestype" default="0" />
+				<field name="group4res2" index="2" type="iextresource" default="" filter="raw" />
+				<field name="group4res2type" type="iextrestype" default="0" />
+				<field name="group4res3" index="3" type="iextresource" default="" filter="raw" />
+				<field name="group4res3type" type="iextrestype" default="0" />
+				<field name="group4res4" index="4" type="iextresource" default="" filter="raw" />
+				<field name="group4res4type" type="iextrestype" default="0" />
+				<field name="group4res5" index="5" type="iextresource" default="" filter="raw" />
+				<field name="group4res5type" type="iextrestype" default="0" />
+			
+			</fieldset>
+			
+			<fieldset name="group5" label="PLG_INTEREXT_FIELDSET_GROUP5_LABEL">
+			
+				<field name="group5exists" type="hidden" default="" />
+				<field name="group5assignment" type="iextgroupassignment" />
+				<field name="group5menuitems" type="iextmenuitems" />
+				<field name="group5action" type="iextgroupaction" default="0" />
+				<field name="group5position" type="iextgroupposition" default="0" />
+				
+				<field name="group5res1" index="1" type="iextresource" default="" filter="raw" />
+				<field name="group5res1type" type="iextrestype" default="0" />
+				<field name="group5res2" index="2" type="iextresource" default="" filter="raw" />
+				<field name="group5res2type" type="iextrestype" default="0" />
+				<field name="group5res3" index="3" type="iextresource" default="" filter="raw" />
+				<field name="group5res3type" type="iextrestype" default="0" />
+				<field name="group5res4" index="4" type="iextresource" default="" filter="raw" />
+				<field name="group5res4type" type="iextrestype" default="0" />
+				<field name="group5res5" index="5" type="iextresource" default="" filter="raw" />
+				<field name="group5res5type" type="iextrestype" default="0" />
+			
+			</fieldset>
+			
+			<fieldset name="group6" label="PLG_INTEREXT_FIELDSET_GROUP6_LABEL">
+			
+				<field name="group6exists" type="hidden" default="" />
+				<field name="group6assignment" type="iextgroupassignment" />
+				<field name="group6menuitems" type="iextmenuitems" />
+				<field name="group6action" type="iextgroupaction" default="0" />
+				<field name="group6position" type="iextgroupposition" default="0" />
+				
+				<field name="group6res1" index="1" type="iextresource" default="" filter="raw" />
+				<field name="group6res1type" type="iextrestype" default="0" />
+				<field name="group6res2" index="2" type="iextresource" default="" filter="raw" />
+				<field name="group6res2type" type="iextrestype" default="0" />
+				<field name="group6res3" index="3" type="iextresource" default="" filter="raw" />
+				<field name="group6res3type" type="iextrestype" default="0" />
+				<field name="group6res4" index="4" type="iextresource" default="" filter="raw" />
+				<field name="group6res4type" type="iextrestype" default="0" />
+				<field name="group6res5" index="5" type="iextresource" default="" filter="raw" />
+				<field name="group6res5type" type="iextrestype" default="0" />
+			
+			</fieldset>
+			
+			<fieldset name="group7" label="PLG_INTEREXT_FIELDSET_GROUP7_LABEL">
+			
+				<field name="group7exists" type="hidden" default="" />
+				<field name="group7assignment" type="iextgroupassignment" />
+				<field name="group7menuitems" type="iextmenuitems" />
+				<field name="group7action" type="iextgroupaction" default="0" />
+				<field name="group7position" type="iextgroupposition" default="0" />
+				
+				<field name="group7res1" index="1" type="iextresource" default="" filter="raw" />
+				<field name="group7res1type" type="iextrestype" default="0" />
+				<field name="group7res2" index="2" type="iextresource" default="" filter="raw" />
+				<field name="group7res2type" type="iextrestype" default="0" />
+				<field name="group7res3" index="3" type="iextresource" default="" filter="raw" />
+				<field name="group7res3type" type="iextrestype" default="0" />
+				<field name="group7res4" index="4" type="iextresource" default="" filter="raw" />
+				<field name="group7res4type" type="iextrestype" default="0" />
+				<field name="group7res5" index="5" type="iextresource" default="" filter="raw" />
+				<field name="group7res5type" type="iextrestype" default="0" />
+			
+			</fieldset>
+			
+			<fieldset name="group8" label="PLG_INTEREXT_FIELDSET_GROUP8_LABEL">
+			
+				<field name="group8exists" type="hidden" default="" />
+				<field name="group8assignment" type="iextgroupassignment" />
+				<field name="group8menuitems" type="iextmenuitems" />
+				<field name="group8action" type="iextgroupaction" default="0" />
+				<field name="group8position" type="iextgroupposition" default="0" />
+				
+				<field name="group8res1" index="1" type="iextresource" default="" filter="raw" />
+				<field name="group8res1type" type="iextrestype" default="0" />
+				<field name="group8res2" index="2" type="iextresource" default="" filter="raw" />
+				<field name="group8res2type" type="iextrestype" default="0" />
+				<field name="group8res3" index="3" type="iextresource" default="" filter="raw" />
+				<field name="group8res3type" type="iextrestype" default="0" />
+				<field name="group8res4" index="4" type="iextresource" default="" filter="raw" />
+				<field name="group8res4type" type="iextrestype" default="0" />
+				<field name="group8res5" index="5" type="iextresource" default="" filter="raw" />
+				<field name="group8res5type" type="iextrestype" default="0" />
+			
+			</fieldset>
+			
+			<fieldset name="group9" label="PLG_INTEREXT_FIELDSET_GROUP9_LABEL">
+			
+				<field name="group9exists" type="hidden" default="" />
+				<field name="group9assignment" type="iextgroupassignment" />
+				<field name="group9menuitems" type="iextmenuitems" />
+				<field name="group9action" type="iextgroupaction" default="0" />
+				<field name="group9position" type="iextgroupposition" default="0" />
+				
+				<field name="group9res1" index="1" type="iextresource" default="" filter="raw" />
+				<field name="group9res1type" type="iextrestype" default="0" />
+				<field name="group9res2" index="2" type="iextresource" default="" filter="raw" />
+				<field name="group9res2type" type="iextrestype" default="0" />
+				<field name="group9res3" index="3" type="iextresource" default="" filter="raw" />
+				<field name="group9res3type" type="iextrestype" default="0" />
+				<field name="group9res4" index="4" type="iextresource" default="" filter="raw" />
+				<field name="group9res4type" type="iextrestype" default="0" />
+				<field name="group9res5" index="5" type="iextresource" default="" filter="raw" />
+				<field name="group9res5type" type="iextrestype" default="0" />
+			
+			</fieldset>
+			
+			<fieldset name="group10" label="PLG_INTEREXT_FIELDSET_GROUP10_LABEL">
+			
+				<field name="group10exists" type="hidden" default="" />
+				<field name="group10assignment" type="iextgroupassignment" />
+				<field name="group10menuitems" type="iextmenuitems" />
+				<field name="group10action" type="iextgroupaction" default="0" />
+				<field name="group10position" type="iextgroupposition" default="0" />
+				
+				<field name="group10res1" index="1" type="iextresource" default="" filter="raw" />
+				<field name="group10res1type" type="iextrestype" default="0" />
+				<field name="group10res2" index="2" type="iextresource" default="" filter="raw" />
+				<field name="group10res2type" type="iextrestype" default="0" />
+				<field name="group10res3" index="3" type="iextresource" default="" filter="raw" />
+				<field name="group10res3type" type="iextrestype" default="0" />
+				<field name="group10res4" index="4" type="iextresource" default="" filter="raw" />
+				<field name="group10res4type" type="iextrestype" default="0" />
+				<field name="group10res5" index="5" type="iextresource" default="" filter="raw" />
+				<field name="group10res5type" type="iextrestype" default="0" />
+			
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>

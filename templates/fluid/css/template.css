@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+/******** Defaults ********/
+html,body,td,th {font:400 17px/26px 'Lato', Arial, Helvetica, sans-serif; color: #333; letter-spacing: .04em;}
+h1, h2, h3, h4, h5, h6 {color: #124; margin: 0 0 .5rem;}
+h1 {font-size: 2.1rem; text-transform: uppercase;}
+h2 {font-size: 1.8rem; text-transform: uppercase;}
+h3 {font-size: 1.6rem; text-transform: uppercase;}
+h4 {font-size: 1.4rem;}
+h5 {font-size: 1.2rem;}
+h6 {font-size: 1rem;}
+a.button {
+    padding: 6px 12px;
+	border: none;
+    color: #fff;
+	background: #9C3;
+    font-size: 1rem; 
+    display:inline-block;
+    margin-top: .5rem;
+}
+p {margin-bottom: 1rem;}
+a:link, a:visited {color: #fdba22; outline: none; text-decoration: none;}
+a:hover {color: #124; }
+.noborder, a img {border: none;}
+img {max-width: 100%; height: auto;}
+img[align*="left"], img[style*="left"] {margin: 0 1rem .5rem 0;}
+img[align*="right"], img[style*="right"] {margin: 0 0 .5rem 1rem;}
+/******** /Defaults ********/

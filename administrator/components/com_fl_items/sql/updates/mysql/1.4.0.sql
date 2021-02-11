@@ -1,0 +1,6 @@
+ALTER TABLE `#__fl_items` ADD COLUMN `alias` varchar(255) NOT NULL;
+UPDATE `#__fl_items` SET `alias` = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(`name`)," ", "-"),"!", ""),"!", ""),"@", ""),"#", ""),"$", ""),"%", ""),"^", ""),"&", ""),"*", ""),"(", ""),")", ""),"_", ""),"=", ""),"+", ""),",", ""),".", ""),"<", ""),">", ""),";", ""),":", ""),"'", ""),"’",""),'"', ""),"`", ""),"~", ""),"/", ""),"?", ""),"[", ""),"]", ""),"{", ""),"}", ""),"\\", ""),"|", ""),"--", "-"),"--", "-"),"--", "-") WHERE `alias` = "";
+UPDATE `#__fl_items` SET `alias` = CONCAT(`item_id`,"-",`alias`) WHERE `item_id` NOT IN (SELECT MIN(item_id) FROM (SELECT * FROM #__fl_items) tempItems GROUP BY alias);
+UPDATE `#__fl_items` SET `alias` = CONCAT(`item_id`,"-",`alias`) WHERE `item_id` NOT IN (SELECT MIN(item_id) FROM (SELECT * FROM #__fl_items) tempItems GROUP BY alias);
+UPDATE `#__fl_items` SET `alias` = CONCAT(`item_id`,"-",`alias`) WHERE `item_id` NOT IN (SELECT MIN(item_id) FROM (SELECT * FROM #__fl_items) tempItems GROUP BY alias);
+ALTER TABLE `#__fl_items` ADD CONSTRAINT UNIQUE (alias);

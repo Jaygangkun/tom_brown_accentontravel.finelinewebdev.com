@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.5.0">
+	<name>FL Custom</name>
+	<author>Fine Line Websites</author>
+	<creationDate>August 2012</creationDate>
+	<authorEmail>info@finelinewebsites.com</authorEmail>
+	<authorUrl>www.finelinewebsites.com</authorUrl>
+	<version>1.5.0</version>
+	<description></description>
+	<files>
+		<filename module="mod_fl_custom">mod_fl_custom.php</filename>
+		<filename module="mod_fl_custom">index.html</filename>
+		<filename>tmpl/index.html</filename>
+		<filename module="mod_fl_custom">tmpl/default.php</filename>
+	</files>
+	<config>
+	<fields name="params">
+	<fieldset name="basic">
+		<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="fieldMODULECLASSSUFFIX" />
+		<field name="template" type="text" default="" label="Template" />
+	</fieldset>
+	<fieldset name="advanced">
+		<field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</field>
+		<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</fieldset>
+	</fields>
+	</config>
+</extension>

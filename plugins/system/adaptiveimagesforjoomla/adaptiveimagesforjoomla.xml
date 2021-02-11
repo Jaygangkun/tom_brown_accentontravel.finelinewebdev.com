@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.8" group="system" method="upgrade">
+  <name>PLG_SYSTEM_ADAPTIVEIMAGES</name>
+  <version>5.4.0</version>
+  <creationDate>2019-09-02</creationDate>
+
+	<author>Extly, CB</author>
+	<authorEmail>team@extly.com</authorEmail>
+	<authorUrl>https://www.extly.com</authorUrl>
+	<copyright>Copyright (c)2007-2019 Extly, CB All rights reserved.</copyright>
+	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
+
+  <description>PLG_SYSTEM_ADAPTIVEIMAGES_XML_DESCRIPTION</description>
+
+  <!-- Scripts to run on installation -->
+  <scriptfile></scriptfile>
+  <!-- Language files -->
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.plg_system_adaptiveimagesforjoomla.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_system_adaptiveimagesforjoomla.sys.ini</language>
+  </languages>
+  <!-- Plugin files -->
+  <files>
+    <filename plugin="adaptiveimagesforjoomla">adaptiveimagesforjoomla.php</filename>
+    <file>helper.php</file>
+  </files>
+  <media destination="plg_system_adaptiveimagesforjoomla" folder="media">
+    <folder>js</folder>
+  </media>
+
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="resolutions" type="text" default="1382,992,768,480" label="PLG_SYSTEM_ADAPTIVEIMAGES_RESOLUTIONS_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_RESOLUTIONS_DESC" />
+
+        <field name="generate_srcset" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYSTEM_ADAPTIVEIMAGES_GENERATE_SRCSET_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_GENERATE_SRCSET_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+
+        <field name="generate_srcset_sizes" type="textarea" default="100vw" label="PLG_SYSTEM_ADAPTIVEIMAGES_GENERATE_SRCSET_SIZES_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_GENERATE_SRCSET_SIZES_DESC" showon="generate_srcset:1" />
+
+        <field name="spacer11" type="spacer" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_FILE_TYPES_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_FILE_TYPES_DESC" />
+
+        <field name="gif" type="radio" class="btn-group btn-group-yesno" default="1" label="gif">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="jpg_jpeg" type="radio" class="btn-group btn-group-yesno" default="1" label="jpg / jpeg">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="png" type="radio" class="btn-group btn-group-yesno" default="1" label="png">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+
+        <field name="image_ignorefiles" type="textarea" cols="40" rows="5" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_IGNORE_FILES_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_IGNORE_FILES_DESC" />
+
+        <field name="ignorefiles" type="textarea" cols="40" rows="5" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_IGNORE_FILES_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_IGNORE_FILES_DESC" />
+        <field name="enable_in_scripts" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_IN_SCRIPTS_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_IN_SCRIPTS_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+
+        <field name="jpg_quality" type="text" default="75" label="PLG_SYSTEM_ADAPTIVEIMAGES_JPG_QUALITY_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_JPG_QUALITY_DESC" />
+
+        <field name="sharpen" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_ADAPTIVEIMAGES_SHARPEN_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_SHARPEN_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+
+        <field name="retina_displays" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYSTEM_ADAPTIVEIMAGES_RETINA_DISPLAYS_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_RETINA_DISPLAYS_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+
+        <field name="ai_cache_path" type="text" size="60" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_CACHE_PATH_PRO_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CACHE_PATH_DESC" />
+      </fieldset>
+
+      <fieldset name="cdn">
+        <field name="root" type="text" size="60" default="/" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_SITE_ROOT_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_SITE_ROOT_DESC" />
+        <field name="cdn" type="text" size="60" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_DOMAIN_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_DOMAIN_DESC" />
+
+        <field name="enable_https" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_HTTPS_PRO_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_HTTPS_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+      </fieldset>
+
+      <fieldset name="extra_cdn_sets">
+        <field name="spacer_2" type="spacer" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_USE_2ND_CDN_SET_PRO_LABEL"/>
+
+        <field name="root_2" type="text" size="60" default="/" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_SITE_ROOT_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_SITE_ROOT_DESC" />
+        <field name="cdn_2" type="text" size="60" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_DOMAIN_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_DOMAIN_DESC" />
+        <field name="enable_https_2" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_HTTPS_PRO_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_HTTPS_PRO_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="gif_2" type="radio" class="btn-group btn-group-yesno" default="1" label="gif">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="jpg_jpeg_2" type="radio" class="btn-group btn-group-yesno" default="1" label="jpg / jpeg">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="png_2" type="radio" class="btn-group btn-group-yesno" default="1" label="png">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="ignorefiles_2" type="textarea" cols="40" rows="5" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_IGNORE_FILES_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_IGNORE_FILES_DESC" />
+        <field name="enable_in_scripts_2" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_IN_SCRIPTS_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_IN_SCRIPTS_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+
+        <field name="spacer_3" type="spacer" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_USE_3ND_CDN_SET_PRO_LABEL"/>
+
+        <field name="root_3" type="text" size="60" default="/" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_SITE_ROOT_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_SITE_ROOT_DESC" />
+        <field name="cdn_3" type="text" size="60" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_DOMAIN_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_DOMAIN_DESC" />
+        <field name="enable_https_3" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_HTTPS_PRO_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_HTTPS_PRO_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="gif_3" type="radio" class="btn-group btn-group-yesno" default="1" label="gif">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="jpg_jpeg_3" type="radio" class="btn-group btn-group-yesno" default="1" label="jpg / jpeg">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="png_3" type="radio" class="btn-group btn-group-yesno" default="1" label="png">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="ignorefiles_3" type="textarea" cols="40" rows="5" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_IGNORE_FILES_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_IGNORE_FILES_DESC" />
+        <field name="enable_in_scripts_3" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_IN_SCRIPTS_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_IN_SCRIPTS_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+
+        <field name="spacer_4" type="spacer" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_USE_4ND_CDN_SET_PRO_LABEL"/>
+
+        <field name="root_4" type="text" size="60" default="/" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_SITE_ROOT_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_SITE_ROOT_DESC" />
+        <field name="cdn_4" type="text" size="60" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_DOMAIN_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_DOMAIN_DESC" />
+        <field name="enable_https_4" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_HTTPS_PRO_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_HTTPS_PRO_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="gif_4" type="radio" class="btn-group btn-group-yesno" default="1" label="gif">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="jpg_jpeg_4" type="radio" class="btn-group btn-group-yesno" default="1" label="jpg / jpeg">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="png_4" type="radio" class="btn-group btn-group-yesno" default="1" label="png">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="ignorefiles_4" type="textarea" cols="40" rows="5" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_IGNORE_FILES_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_IGNORE_FILES_DESC" />
+        <field name="enable_in_scripts_4" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_IN_SCRIPTS_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_IN_SCRIPTS_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+
+        <field name="spacer_5" type="spacer" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_USE_5ND_CDN_SET_PRO_LABEL"/>
+
+        <field name="root_5" type="text" size="60" default="/" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_SITE_ROOT_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_SITE_ROOT_DESC" />
+        <field name="cdn_5" type="text" size="60" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_DOMAIN_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_DOMAIN_DESC" />
+        <field name="enable_https_5" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_HTTPS_PRO_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_HTTPS_PRO_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="gif_5" type="radio" class="btn-group btn-group-yesno" default="1" label="gif">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="jpg_jpeg_5" type="radio" class="btn-group btn-group-yesno" default="1" label="jpg / jpeg">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="png_5" type="radio" class="btn-group btn-group-yesno" default="1" label="png">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="ignorefiles_5" type="textarea" cols="40" rows="5" default="" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_IGNORE_FILES_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_IGNORE_FILES_DESC" />
+        <field name="enable_in_scripts_5" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_IN_SCRIPTS_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_CDN_ENABLE_IN_SCRIPTS_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+      </fieldset>
+      <fieldset name="lazyload">
+        <field name="enable_lazyload" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYSTEM_ADAPTIVEIMAGES_ENABLE_LAZYLOAD_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_ENABLE_LAZYLOAD_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+
+        <field name="detection_class" type="text" size="60" default="xt-lazy-img" label="PLG_SYSTEM_ADAPTIVEIMAGES_DETECTION_CLASS_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_DETECTION_CLASS_DESC" />
+
+        <field name="lazyload_library" type="radio" class="btn-group" default="0" label="PLG_SYSTEM_ADAPTIVEIMAGES_LAZYLOAD_LIBRARY_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_LAZYLOAD_LIBRARY_DESC">
+          <option value="0">jQuery Lazy Load (1.9.5)</option>
+          <option value="1">Vanilla Lazy Load (2.0.0-beta.2)</option>
+        </field>
+      </fieldset>
+      <fieldset name="assignment">
+        <field name="activate-at-backend" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYSTEM_ADAPTIVEIMAGES_ACTIVATE_AT_BACKEND_LABEL" description="PLG_SYSTEM_ADAPTIVEIMAGES_ACTIVATE_AT_BACKEND_DESCRIPTION">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+
+        <field name="inclurls" type="textarea" rows="5" cols="80" label="PLG_ADAPTIVEIMAGES_ONLYURLS_LABEL" description="PLG_ADAPTIVEIMAGES_ONLYURLS_DESC">
+        </field>
+
+        <field name="exclurls" type="textarea" rows="5" cols="80" label="PLG_ADAPTIVEIMAGES_EXCLURLS_LABEL" description="PLG_ADAPTIVEIMAGES_EXCLURLS_DESC">
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

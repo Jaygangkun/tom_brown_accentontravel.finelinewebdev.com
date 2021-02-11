@@ -1,0 +1,9 @@
+ALTER TABLE `#__fl_items_category` ADD COLUMN `parent_category_id` int NOT NULL;
+ALTER TABLE `#__fl_items_category` ADD COLUMN `isLinkToUser` tinyint NOT NULL;
+ALTER TABLE `#__fl_items_category` ADD COLUMN `isFeaturedEnabled` tinyint NOT NULL;
+ALTER TABLE `#__fl_items_category` ADD COLUMN `imageWidth` int NOT NULL;
+ALTER TABLE `#__fl_items_category` ADD COLUMN `imageHeight` int NOT NULL;
+ALTER TABLE `#__fl_items_category` ADD COLUMN `usersEditOnly` tinyint NOT NULL;
+ALTER TABLE `#__fl_items_category` ADD COLUMN `usersUpdatePublish` tinyint NOT NULL;
+ALTER TABLE `#__fl_items_category` ADD COLUMN `isForceMenuItem` tinyint NOT NULL;
+ALTER TABLE `#__fl_items` ADD COLUMN `linked_user_id` int NOT NULL;

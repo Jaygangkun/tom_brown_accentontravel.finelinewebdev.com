@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8.0" type="package" method="upgrade">
+  <packagename>adaptiveimagesforjoomla</packagename>
+  <packager>Extly, CB</packager>
+  <packagerurl>https://www.extly.com</packagerurl>
+  <name>XT Adaptive Images PRO</name>
+  <description>
+    <![CDATA[
+<p><strong>XT Adaptive Images</strong> for Joomla! is the best extension to generate responsive images. The plugin implements:</p><ul><li><strong>Adaptive Images</strong>, to generate images of different sizes to match the desktop and mobile resolutions.</li><li><strong><i>PRO version</i> - HTML's new responsive image attributes</strong>, to support the latest HTML's new responsive image attributes.</li><li><strong><i>PRO version</i> - Lazy Load</strong>, to delay the photos load until it is finally required when the user visits a page.</li><li><strong>CDN Integration</strong>, to deliver images from your CDN.</li></ul><p class=\"alert alert-warning\">IMPORTANT: This plugin generates different images for each device, thus a device-dependent page cache, such as <a href='http://www.jotcomponents.net/web-programming/jotcache/download' target='_blank'>JotCache</a>, must be installed and enabled. Documentation: <a href='https://www.extly.com/docs/others/xt-adaptive_images/overview' target='_blank'>XT Adaptive Images for Joomla - Overview and Quick Setup</a>.</p>
+  ]]>
+  </description>
+  <version>5.4.0</version>
+  <creationDate>2019-09-02</creationDate>
+
+	<author>Extly, CB</author>
+	<authorEmail>team@extly.com</authorEmail>
+	<authorUrl>https://www.extly.com</authorUrl>
+	<copyright>Copyright (c)2007-2019 Extly, CB All rights reserved.</copyright>
+	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
+
+  <!-- List of extensions to install -->
+  <files>
+    <!-- Library -->
+    <file type="library" id="lib_adaptiveimagesforjoomla">library</file>
+    <file type="library">platform</file>
+
+    <!-- Plugins: adaptiveimagesforjoomla  -->
+    <file type="plugin" group="system" id="adaptiveimagesforjoomla">plg_system_adaptiveimagesforjoomla</file>
+  </files>
+  <!-- Installation script -->
+  <scriptfile>script.adaptiveimagesforjoomla.php</scriptfile>
+  <!-- Update servers -->
+  <updateservers>
+      <server type="extension" priority="1" name="XT Adaptive Images PRO"><![CDATA[http://cdn.extly.com/update-xt-adaptive-images-pro.xml]]></server>
+  </updateservers>
+</extension>

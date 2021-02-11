@@ -1,0 +1,91 @@
+.fl-item-lightbox {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.75);
+	z-index: 999;
+	text-align: center;
+}
+.fl-item-lightbox .slick-arrow {
+	background: none !important;
+	text-shadow: 1px 1px 2px black;
+	opacity: 0.6;
+}
+.fl-item-lightbox .slick-arrow.slick-next {
+	padding-left: 40%;
+}
+.fl-item-lightbox .slick-arrow.slick-prev {
+	padding-right: 40%;
+}
+.fl-item-lightbox .slick-arrow:hover {
+	text-shadow: 1px 1px 2px black;
+	opacity: 1;
+}
+.fl-item-lightbox-close {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.fl-item-lightbox-close:hover:after {
+	content: "X";
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 30px;
+	font-weight: bold;
+	color: #FFF;
+	padding: 30px 30px 30px 30px;
+	cursor: pointer;
+}
+.fl-item-lightbox-close:after {
+	content: "X";
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 30px;
+	font-weight: bold;
+	color: #BBB;
+	padding: 30px 30px 30px 30px;
+	cursor: pointer;
+}
+.fl-item-lightbox .slickslider {
+	width: 75%;
+	height: 100%;
+	display: inline-block;
+	background: rgba(0,0,0,0.7);
+	padding: 15px;
+}
+.fl-item-lightbox .slickslider .slick-list {
+	height: 100% !important;
+	padding: 10% 0;
+}
+.fl-item-lightbox .slickslider .slick-list .slick-track {
+	height: 100% !important;
+}
+.fl-item-lightbox .slickslider .slick-list .slick-track .slider-item {
+	height: 100%;
+}
+.fl-item-lightbox .slickslider .slick-initialized .slick-slide {
+	text-align: center;
+}
+.fl-item-lightbox .slickslider .slick-list .slick-track .slider-item .slider-image {
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	border: 1px solid transparent;
+}
+.row.fl-item-grid-gallery {
+	position: relative;
+	margin-left: -8px;
+	margin-right: -8px;
+}
+.fl-item-grid-gallery .grid-item {
+	cursor: pointer;
+	padding: 8px;
+}
+.fl-item-grid-gallery .grid-item img {
+	width: 100%;
+}

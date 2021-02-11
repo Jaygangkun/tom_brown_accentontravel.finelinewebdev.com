@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!--<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">--> 
+<extension type="component" version="3.0" method="upgrade"> 
+    <!-- Component name --> 
+    <name>FL Schema</name> 
+    
+    <!-- Optional  --> 
+    <creationDate>2019-05-30</creationDate> 
+    <author>Fine Line Websites</author> 
+    <authorEmail>info@finelineit.com</authorEmail> 
+    <authorUrl>http://www.finelinewebsites.com</authorUrl> 
+    <copyright>Copyright Info</copyright> 
+    <license>License Info</license>       
+    <version>1.0.0</version> 
+    <!-- Optional  -->
+    <!-- Install Database Section --> 
+    <install> 
+		<sql> 
+			<file charset="utf8" driver="mysql">fl_schema.sql</file> 
+		</sql> 
+    </install> 
+    
+    <!-- Files that go to the backend --> 
+    <administration>
+	 <!-- Administration Menu Section --> 
+        <menu link="option=com_fl_schema">com_fl_schema</menu>
+			<!-- Administration Main File Copy Section --> 
+			<files folder="admin">  
+                <filename>assets/selectize.bootstrap2.css</filename> 
+                <filename>assets/selectize.js</filename> 
+                
+			   	<filename>controllers/schema.php</filename> 
+			   	<filename>controllers/index.html</filename>
+			   	 
+			   	<filename>tables/schema.php</filename> 
+			   	<filename>tables/index.html</filename>      
+			   	
+			   	<filename>views/schema.php</filename>
+		   		<filename>views/index.html</filename>   
+			   	                         
+			   	<filename>fl_schema.php</filename>
+			   	<filename>fl_schema.sql</filename>
+			   	<filename>index.html</filename> 			
+				<filename>access.xml</filename> 			
+				<filename>config.xml</filename> 			   
+			</files> 
+			<languages folder="admin">
+				<language tag="en-US">language/en-US/en-US.com_fl_schema.sys.ini</language>
+			</languages>
+    </administration>
+</extension>

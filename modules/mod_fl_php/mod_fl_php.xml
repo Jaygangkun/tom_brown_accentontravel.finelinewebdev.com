@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0">
+  <name>FL PHP</name>
+  <author>Fine Line Websites</author>
+  <creationDate>May 2013</creationDate>
+  <authorEmail>info@finelinewebsites.com</authorEmail>
+  <authorUrl>www.finelinewebsites.com</authorUrl>
+  <version>1.0</version>
+  <description></description>
+  <files>
+    <filename module="mod_fl_php">mod_fl_php.php</filename>
+	<filename>tmp/index.html</filename>
+  </files>
+  <config>
+	<fields name="params">
+		<fieldset name="basic">
+		<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Suffix to append to the CSS class attribute of this module." />
+		<field name="cache" type="radio" default="0" label="Enable Cache" description="Select whether to cache the content of this module">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="php" type="textarea" filter="raw" default="" label="PHP, HTML, JS, CSS" description="Add any PHP, Html, Javascript or CSS Here." cols="70" rows="30" />
+		<field name="eval_php" type="list" default="1" label="Evaluate PHP" description="Allows you to embed PHP into your content. If you are just using HTML, CSS, and JavaScript in this module, you could turn this off for faster performance.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		</fieldset>
+	</fields>
+  </config>
+</extension>

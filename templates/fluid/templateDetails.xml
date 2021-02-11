@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>fluid</name>
+	<version>3.2.3</version>
+	<creationDate>7/9/2015</creationDate>
+	<author>Fine Line Websites</author>
+	<authorEmail>info@finelineit.com</authorEmail>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.</copyright>
+	<description>FLuid 3.2.3 Template</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>error.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</files>
+	<positions>
+		<position>header-top</position>
+		<position>header</position>
+		<position>header-bottom</position>
+		<position>navbar-brand</position>
+		<position>main-menu-fixed</position>
+		<position>main-menu-affix</position>
+		<position>main-menu</position>
+		<position>navbar-message</position>
+		<position>logo</position>		
+		<position>banner-full</position>
+		<position>banner-message</position>
+		<position>banner</position>		
+		<position>top-section</position>
+		<position>above-content</position>
+		<position>breadcrumbs</position>
+		<position>content-left</position>
+		<position>content-right</position>
+		<position>below-content</position>
+		<position>bottom-section</position>		
+		<position>footer-top</position>
+		<position>footer</position>
+		<position>footer-bottom</position>		
+		<position>debug</position>
+	</positions>
+</extension>

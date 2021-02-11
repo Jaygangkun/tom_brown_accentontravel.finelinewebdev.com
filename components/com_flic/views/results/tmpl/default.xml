@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="FLIC Results">
+   
+  </layout>
+   
+   <fields name="params">
+   		<fieldset name="options" label="Category Options">
+     		<field 
+     			name="category" 
+     			type="sql" 
+     			default="0" 
+     			label="Select a Category" 
+     			query="SELECT 0 AS value, 'Show All' AS category, 0 as treeLeft UNION ALL SELECT alias AS value, `name` AS category, treeLeft FROM #__flic_category ORDER BY treeLeft"></field>
+        <field
+          name="recordsPerPage"
+          type="text"
+          default="30"
+          label="Galleries Per Page">
+        </field>
+    	</fieldset>
+   </fields>
+  
+</metadata>

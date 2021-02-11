@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!--<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">--> 
+<extension type="component" version="3.0" method="upgrade"> 
+    <!-- Component name --> 
+    <name>FLIC</name> 
+    
+    <!-- Optional  --> 
+    <creationDate>2015-09-29</creationDate> 
+    <author>Fine Line Websites</author> 
+    <authorEmail>info@finelineit.com</authorEmail> 
+    <authorUrl>http://www.finelinewebsites.com</authorUrl> 
+    <copyright>Copyright Info</copyright> 
+    <license>License Info</license>       
+    <version>1.2.4</version> 
+    <!-- Optional  -->
+    <!-- Install Database Section --> 
+    <install> 
+		<sql> 
+			<file charset="utf8" driver="mysql">flic.sql</file> 
+		</sql> 
+    </install> 
+    
+    <!-- Files that go to the frontend --> 
+    <files folder="site">			
+    </files>
+	<config>
+	</config>
+    <!-- Files that go to the backend --> 
+    <administration>
+	 <!-- Administration Menu Section --> 
+			<!-- Administration Main File Copy Section --> 
+			<files folder="admin">  
+                <folder>controllers</folder>
+                <folder>tables</folder>
+                <folder>views</folder>
+			   	                         
+			   	<filename>fl_menumaker.php</filename>
+			   	<filename>index.html</filename> 			
+				<filename>access.xml</filename> 			
+				<filename>config.xml</filename> 			
+			</files> 
+			<languages folder="admin">
+			</languages>
+    </administration>
+</extension>

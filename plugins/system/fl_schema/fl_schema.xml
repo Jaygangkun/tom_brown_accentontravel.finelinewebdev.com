@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>System - FL Schema</name>
+	<author>Fine Line</author>
+	<creationDate>June 2019</creationDate>
+	<copyright>(C) 2007-2015 www.finelinewebsites.com</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>info@finelineit.com</authorEmail>
+	<authorUrl>www.finelineit.com</authorUrl>
+	<version>1.0.0</version>
+	<description>FL Schema</description>
+	
+	<files>
+		<filename plugin="fl_schema">fl_schema.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

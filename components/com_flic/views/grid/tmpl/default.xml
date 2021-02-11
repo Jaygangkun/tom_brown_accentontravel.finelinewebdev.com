@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="FLIC Grid">
+   
+  </layout>
+  	<fields name="params">
+   		<fieldset name="options" label="Gallery Options">
+ 			<field 
+     			name="menu_gallery" 
+     			type="sql" 
+     			default="0" 
+     			label="Select a Gallery" 
+     			key_field="alias"
+     			value_field="name"
+     			query="SELECT alias, name AS name FROM #__flic ORDER BY name"></field>
+ 			<field name="grid-cols" type="number" default="3" label="# of Columns"></field>
+			<field name="padding" type="number" default="10" label="Image Padding" />
+		</fieldset>
+	</fields>
+  
+</metadata>

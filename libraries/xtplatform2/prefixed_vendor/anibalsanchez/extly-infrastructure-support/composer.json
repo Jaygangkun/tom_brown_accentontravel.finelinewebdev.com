@@ -1,0 +1,53 @@
+{
+  "name": "anibalsanchez/extly-infrastructure-support",
+  "version": "1.99.9",
+  "description": "Extly Infrastructure Support",
+  "authors": [
+    {
+      "name": "Extly CB",
+      "email": "team@extly.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Extly\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": ">=5.6",
+    "anibalsanchez/create-pattern": "^2.0",
+    "anibalsanchez/extly-infrastructure-cms-contract": "dev-master",
+    "danielstjules/stringy": "^3.1",
+    "dragonmantank/cron-expression": "^2.1",
+    "guzzlehttp/psr7": "^1.4",
+    "league/uri": "^5.3",
+    "monolog/monolog": "^1.24",
+    "myclabs/php-enum": "^1.6",
+    "neitanod/forceutf8": "^2.0",
+    "nesbot/carbon": "^1.36|^2.16",
+    "php-http/client-common": "^1.8",
+    "php-http/curl-client": "^1.7",
+    "php-http/discovery": "^1.4",
+    "php-http/message": "^1.7",
+    "symfony/options-resolver": "^3.4.0|^4.2.4",
+    "symfony/translation": "~3.4.0|^4.2.4"
+  },
+  "license": "MIT",
+  "repositories": [
+    {
+      "url": "git@github.com:anibalsanchez/extly-infrastructure-cms-contract.git",
+      "type": "git"
+    }
+  ],
+  "config": {
+    "sort-packages": true
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.3"
+  }
+}

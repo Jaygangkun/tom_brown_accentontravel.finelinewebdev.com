@@ -1,0 +1,91 @@
+{
+  "name": "anibalsanchez/xtplatform",
+  "version": "2.0.0",
+  "description": "Extly Platform. Libraries for Extensions.",
+  "require": {
+    "anibalsanchez/extly-infrastructure-support": "dev-master",
+    "anibalsanchez/extly-infrastructure-cms-contract": "dev-master",
+    "anibalsanchez/extly-infrastructure-cms-joomla": "dev-master",
+    "anibalsanchez/extly-html-asset-tags-builder": "dev-master"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "url": "git@github.com:anibalsanchez/extly-infrastructure-support.git",
+      "type": "git"
+    },
+    {
+      "url": "git@github.com:anibalsanchez/extly-infrastructure-cms-contract.git",
+      "type": "git"
+    },
+    {
+      "url": "git@github.com:anibalsanchez/extly-infrastructure-cms-joomla.git",
+      "type": "git"
+    }
+  ],
+  "extra": {
+    "php-prefixer": {
+      "projectName": "XT Platform",
+      "prefixForNamespaces": "XTP_BUILD",
+      "prefixForGlobalObjects": "XTP_",
+      "disclaimer": false,
+      "includeLibrariesDependiencies": {
+        "illuminate/support": [
+          "psr/log"
+        ],
+        "nesbot/carbon": [
+          "illuminate/support"
+        ],
+        "php-http/client-common": [
+          "guzzlehttp/psr7"
+        ],
+        "php-http/curl-client": [
+          "guzzlehttp/psr7"
+        ],
+        "php-http/discovery": [
+          "guzzlehttp/psr7",
+          "php-http/message",
+          "psr/log"
+        ],
+        "php-http/message": [
+          "guzzlehttp/psr7"
+        ],
+        "symfony/translation": [
+          "psr/log"
+        ]
+      },
+      "ignoreLibraries": [
+        "paragonie/random_compat",
+        "symfony/polyfill-ctype",
+        "symfony/polyfill-mbstring",
+        "symfony/polyfill-php56",
+        "symfony/polyfill-php70"
+      ],
+      "ignoreGlobalObjects": [
+        "Carbon",
+        "JsonSerializable",
+        "jsonSerialize",
+        "value"
+      ],
+      "ignorePaths": [
+        "vlucas/valitron/lang",
+        "nesbot/carbon/src/Carbon/Lang"
+      ],
+      "excludePaths": [
+        "anibalsanchez/extly-infrastructure-cms-joomla/tests",
+        "anibalsanchez/extly-infrastructure-support/tests",
+        "clue/stream-filter/examples",
+        "clue/stream-filter/tests",
+        "doctrine/inflector/tests",
+        "dragonmantank/cron-expression/tests",
+        "league/uri-manipulations/tests",
+        "monolog/monolog/tests",
+        "studiow/html/tests",
+        "symfony/options-resolver/Tests",
+        "symfony/translation/Resources/bin",
+        "symfony/translation/Tests"
+      ]
+    }
+  }
+}

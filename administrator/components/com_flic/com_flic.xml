@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!--<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">--> 
+<extension type="component" version="3.0" method="upgrade"> 
+    <!-- Component name --> 
+    <name>FLIC</name> 
+    
+    <!-- Optional  --> 
+    <creationDate>2015-09-29</creationDate> 
+    <author>Fine Line Websites</author> 
+    <authorEmail>info@finelineit.com</authorEmail> 
+    <authorUrl>http://www.finelinewebsites.com</authorUrl> 
+    <copyright>Copyright Info</copyright> 
+    <license>License Info</license>       
+    <version>2.1.0</version> 
+    <!-- Optional  -->
+    <!-- Install Database Section --> 
+    <install> 
+		<sql> 
+			<file charset="utf8" driver="mysql">flic.sql</file> 
+		</sql> 
+    </install> 
+    
+    <update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+    
+    <!-- Files that go to the frontend --> 
+    <files folder="site"> 
+        <filename>assets/flic-grid.css</filename> 
+        <filename>assets/slick.css</filename> 
+        <filename>assets/slick.min.js</filename> 
+        <filename>assets/ajax-loader.gif</filename> 
+        <filename>assets/fonts/slick.eot</filename> 
+        <filename>assets/fonts/slick.svg</filename> 
+        <filename>assets/fonts/slick.ttf</filename> 
+        <filename>assets/fonts/slick.woff</filename> 
+        <filename>models/flic.php</filename> 
+        <filename>models/flic_image.php</filename> 
+		<filename>views/index.html</filename> 
+        <filename>views/detail/index.html</filename> 
+		<filename>views/detail/view.html.php</filename>
+		<filename>views/detail/tmpl/default.php</filename>
+		<filename>views/detail/tmpl/default.xml</filename>
+		<filename>views/detail/tmpl/index.html</filename>
+        <filename>views/grid/index.html</filename> 
+		<filename>views/grid/view.html.php</filename>
+		<filename>views/grid/tmpl/default.php</filename>
+		<filename>views/grid/tmpl/default.xml</filename>
+		<filename>views/grid/tmpl/index.html</filename>
+		<filename>views/results/index.html</filename> 
+		<filename>views/results/view.html.php</filename>
+		<filename>views/results/tmpl/default.php</filename>
+		<filename>views/results/tmpl/default.xml</filename>
+		<filename>views/results/tmpl/index.html</filename>
+		<filename>controller.php</filename> 
+		<filename>flic.php</filename> 
+        <filename>index.html</filename> 
+		<filename>router.php</filename> 				
+    </files>
+	<config>
+	</config>
+    <!-- Files that go to the backend --> 
+    <administration>
+	 <!-- Administration Menu Section --> 
+        <menu link="option=com_flic">com_flic</menu>
+			<!-- Administration Main File Copy Section --> 
+			<files folder="admin">  
+				<folder>sql</folder>
+                <filename>assets/selectize.bootstrap2.css</filename> 
+                <filename>assets/selectize.js</filename> 
+                
+			   	<filename>controllers/categories.php</filename> 
+			   	<filename>controllers/galleries.php</filename> 
+			   	<filename>controllers/index.html</filename>
+			   	 
+			   	<filename>helpers/resize.php</filename>
+			   	<filename>helpers/tree.php</filename> 
+			   	<filename>helpers/index.html</filename>
+			   	
+			   	<filename>tables/categories.php</filename> 
+			   	<filename>tables/categorygallery.php</filename>  
+			   	<filename>tables/galleries.php</filename>   
+			   	<filename>tables/images.php</filename>  
+			   	<filename>tables/index.html</filename>      
+			   	
+			   	<filename>views/category.php</filename>
+			   	<filename>views/clients.php</filename>
+			   	<filename>views/gallery.php</filename>
+		   		<filename>views/index.html</filename>   
+			   	                         
+			   	<filename>flic.php</filename>
+			   	<filename>flic.sql</filename>
+			   	<filename>index.html</filename> 			
+				<filename>access.xml</filename> 			
+				<filename>config.xml</filename> 			   
+			</files> 
+			<languages folder="admin">
+				<language tag="en-US">language/en-US/en-US.com_flic.sys.ini</language>
+			</languages>
+    </administration>
+</extension>

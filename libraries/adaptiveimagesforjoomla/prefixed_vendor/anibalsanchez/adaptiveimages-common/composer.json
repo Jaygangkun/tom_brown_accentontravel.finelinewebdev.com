@@ -1,0 +1,21 @@
+{
+  "name": "anibalsanchez/adaptiveimages-common",
+  "version": "5.0.0",
+  "description": "XT Adaptive Images Common",
+  "authors": [
+    {
+      "name": "Andrea Gentil & Anibal Sanchez, Extly CB",
+      "email": "team@extly.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Extly\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.6"
+  },
+  "license": "GPL-3.0-or-later",
+  "repositories": []
+}

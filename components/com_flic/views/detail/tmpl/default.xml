@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="FLIC Detail">
+   
+  </layout>
+  	<fields name="params">
+   		<fieldset name="options" label="Gallery Options">
+ 			<field 
+     			name="menu_gallery" 
+     			type="sql" 
+     			default="0" 
+     			label="Select a Gallery" 
+     			key_field="alias"
+     			value_field="name"
+     			query="SELECT alias, name AS name FROM #__flic ORDER BY name"></field>
+		</fieldset>
+	</fields>
+  
+</metadata>

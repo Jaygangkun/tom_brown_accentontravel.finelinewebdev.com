@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+    <name>Content - Fast Social Share</name>
+    <author>Joomla! Extensions Store</author>
+	<creationDate>April 2020</creationDate>
+	<copyright>Copyright (C) 2018 - Joomla! Extensions Store. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@storejextensions.org</authorEmail>
+	<authorUrl>http://storejextensions.org</authorUrl>
+	<version>3.8</version>
+    <description>PLG_CONTENT_FASTSOCIALSHARE_DESCRIPTION</description>
+    	<files>
+		<filename plugin="fastsocialshare">fastsocialshare.php</filename>
+		<folder>style</folder>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_fastsocialshare.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_fastsocialshare.sys.ini</language>
+	</languages>
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="spacer0" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_FASTSOCIALSHARE_GENERALSETTINGS_TITLE" />
+				<field name="custom" type="radio" class="btn-group" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_CUSTOM" description="PLG_CONTENT_FASTSOCIALSHARE_CUSTOM_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_NO</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_YES</option>
+				</field>
+				<field name="position" type="list" default="2" label="PLG_CONTENT_FASTSOCIALSHARE_POSITION" description="PLG_CONTENT_FASTSOCIALSHARE_POSITION_DESC">
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_BOTH</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_TOP</option>
+				   <option value="2">PLG_CONTENT_FASTSOCIALSHARE_BOTTOM</option>
+				   <option value="3">PLG_CONTENT_FASTSOCIALSHARE_NOTHING</option>
+				</field>
+				<field name="alignment" type="list" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_ALIGNMENT" description="PLG_CONTENT_FASTSOCIALSHARE_ALIGNMENT_DESC">
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_LEFT</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_CENTER</option>
+				   <option value="2">PLG_CONTENT_FASTSOCIALSHARE_RIGHT</option>
+				</field>
+				<field name="headerText" type="text" default="" size="100" label="PLG_CONTENT_FASTSOCIALSHARE_HEADER_TEXT" description="PLG_CONTENT_FASTSOCIALSHARE_HEADER_TEXT_DESC" />
+				
+				<field name="showInArticles" type="radio" class="btn-group" default="1" label="PLG_CONTENT_FASTSOCIALSHARE_SHOW_ARTICLE" description="PLG_CONTENT_FASTSOCIALSHARE_SHOW_ARTICLE_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_NO</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_YES</option>
+				</field>
+				
+				<field name="showInCategories" type="radio" class="btn-group" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_SHOW_CATEGORY" description="PLG_CONTENT_FASTSOCIALSHARE_SHOW_CATEGORY_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_NO</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_YES</option>
+				</field>
+				
+				<field name="showInFrontPage" type="radio" class="btn-group" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_SHOW_FRONTPAGE" description="PLG_CONTENT_FASTSOCIALSHARE_SHOW_FRONTPAGE_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_NO</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_YES</option>
+				</field>
+				<field name="excludeSections" type="text" default="" size="40" label="PLG_CONTENT_FASTSOCIALSHARE_EXCLUDE_SECTION" description="PLG_CONTENT_FASTSOCIALSHARE_EXCLUDE_SECTION_DESC" />
+				<field name="excludeCats" type="text" default="" size="40" label="PLG_CONTENT_FASTSOCIALSHARE_EXCLUDE_CATEGORY" description="PLG_CONTENT_FASTSOCIALSHARE_EXCLUDE_CATEGORY_DESC" />
+				<field name="excludeArticles" type="text" default="" size="40" label="PLG_CONTENT_FASTSOCIALSHARE_EXCLUDE_ARTICLE" description="PLG_CONTENT_FASTSOCIALSHARE_EXCLUDE_ARTICLE_DESC" />
+				<field name="includeArticles" type="text" default="" size="40" label="PLG_CONTENT_FASTSOCIALSHARE_INCLUDE_ARTICLE" description="PLG_CONTENT_FASTSOCIALSHARE_INCLUDE_ARTICLE_DESC" /> 
+			
+				<field name="use_http_domain" type="radio" class="btn-group" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_USE_HTTP_DOMAIN" description="PLG_CONTENT_FASTSOCIALSHARE_USE_HTTP_DOMAIN_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_NO</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_YES</option>
+				</field>
+				
+				<field name="spacer1" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_FASTSOCIALSHARE_APPEARANCE_TITLE" />
+				<field name="togglermode" type="radio" class="btn-group" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_TOGGLERMODE_TITLE" description="PLG_CONTENT_FASTSOCIALSHARE_TOGGLERMODE_TITLE_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_NO</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_YES</option>
+				</field>
+				<field name="togglericons" type="text" default="Toggle sharing icons" label="PLG_CONTENT_FASTSOCIALSHARE_TOGGLERICONS_TITLE" description="PLG_CONTENT_FASTSOCIALSHARE_TOGGLERICONS_TITLE_DESC" />
+				
+				<field name="togglericons_background_color" type="color" default="#1877f2" label="PLG_CONTENT_FASTSOCIALSHARE_TOGGLERICONS_BACKGROUND_COLOR" description="PLG_CONTENT_FASTSOCIALSHARE_TOGGLERICONS_BACKGROUND_COLOR_DESC" />
+				<field name="togglericons_icon_color" type="list" default="light" label="PLG_CONTENT_FASTSOCIALSHARE_TOGGLERICONS_ICON_COLOR" description="PLG_CONTENT_FASTSOCIALSHARE_TOGGLERICONS_ICON_COLOR_DESC" >
+				   <option value="light">PLG_CONTENT_FASTSOCIALSHARE_TOGGLERICONS_ICON_COLOR_LIGHT</option>
+				   <option value="dark">PLG_CONTENT_FASTSOCIALSHARE_TOGGLERICONS_ICON_COLOR_DARK</option>
+				</field>
+				
+				<field name="spacer2" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_FASTSOCIALSHARE_OPENGRAPH_TITLE" />
+				<field name="ogimage_detection" type="radio" class="btn-group" default="1" label="PLG_CONTENT_FASTSOCIALSHARE_OGIMAGE_DETECTION" description="PLG_CONTENT_FASTSOCIALSHARE_OGIMAGE_DETECTION_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_NO</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_YES</option>
+				</field>
+				<field name="ogimage_detection_type" type="list" default="image_fulltext" label="PLG_CONTENT_FASTSOCIALSHARE_OGIMAGE_DETECTION_TYPE" description="PLG_CONTENT_FASTSOCIALSHARE_OGIMAGE_DETECTION_TYPE_DESC" >
+				   <option value="image_intro">PLG_CONTENT_FASTSOCIALSHARE_OGIMAGE_DETECTION_TYPE_INTRO</option>
+				   <option value="image_fulltext">PLG_CONTENT_FASTSOCIALSHARE_OGIMAGE_DETECTION_TYPE_FULL</option>
+				</field>
+				<field name="ogtitle_detection" type="radio" class="btn-group" default="1" label="PLG_CONTENT_FASTSOCIALSHARE_OGTITLE_DETECTION" description="PLG_CONTENT_FASTSOCIALSHARE_OGTITLE_DETECTION_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_NO</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_YES</option>
+				</field>
+				<field name="ogdescription_detection" type="radio" class="btn-group" default="1" label="PLG_CONTENT_FASTSOCIALSHARE_OGDESCRIPTION_DETECTION" description="PLG_CONTENT_FASTSOCIALSHARE_OGDESCRIPTION_DETECTION_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_NO</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_YES</option>
+				</field>
+				<field name="og_incats" type="radio" class="btn-group" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_OG_INCATS" description="PLG_CONTENT_FASTSOCIALSHARE_OG_INCATS_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_NO</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_YES</option>
+				</field>
+
+				<field name="twitter_card_enable" type="radio" class="btn-group" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_TWITTERCARD" description="PLG_CONTENT_FASTSOCIALSHARE_TWITTERCARD_DESC" >
+				   <option value="0">JNO</option>
+				   <option value="1">JYES</option>
+				</field>
+				<field name="twitter_card_site" default="" type="text" label="PLG_CONTENT_FASTSOCIALSHARE_TWITTERCARD_SITE" description="PLG_CONTENT_FASTSOCIALSHARE_TWITTERCARD_SITE_DESC" />
+				<field name="twitter_card_creator" default="" type="text" label="PLG_CONTENT_FASTSOCIALSHARE_TWITTERCARD_CREATOR" description="PLG_CONTENT_FASTSOCIALSHARE_TWITTERCARD_CREATOR_DESC" />
+			
+				<field name="spacer3" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_TITLE" />
+				<field name="facebookLikeButton" type="radio" class="btn-group" default="1" label="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_BUTTON" description="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_BUTTON_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_HIDE</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_SHOW</option>
+				</field>
+
+				<field name="facebookLikeAction" type="list" default="like" label="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_BUTTON_TEXT" description="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_BUTTON_TEXT_DESC" >
+				   <option value="like">PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_LIKE</option>
+				   <option value="recommend">PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_RECOMMEND</option>
+				</field>
+				<field name="facebookLikeType" type="list" default="standard" label="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_TYPE" description="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_TYPE_DESC" >
+				   <option value="standard">PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_STANDARD</option>
+				   <option value="box_count">PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_BOX_COUNT</option>
+				   <option value="button_count">PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_BUTTON_COUNT</option>
+				   <option value="button">PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_BUTTON</option>
+				</field>
+
+				<field name="facebookLikeColor" type="list" default="light" label="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_COLOR" description="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_COLOR_DESC" >
+				   <option value="light">PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_LIGHT</option>
+				   <option value="dark">PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_DARK</option>
+				</field>
+
+				<field name="facebookLikeShowfaces" type="list" default="true" label="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_SHOWFACES" description="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_SHOWFACES_DESC" >
+				   <option value="false">PLG_CONTENT_FASTSOCIALSHARE_HIDE</option>
+				   <option value="true">PLG_CONTENT_FASTSOCIALSHARE_SHOW</option>
+				</field>
+
+				<field name="facebookLikeWidth" type="text" default="100" label="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_WIDTH" description="PLG_CONTENT_FASTSOCIALSHARE_FB_LIKE_WIDTH_DESC" />
+				<field name="facebookLikeAppId" type="text" default="" label="PLG_CONTENT_FASTSOCIALSHARE_FB_APP_ID" description="PLG_CONTENT_FASTSOCIALSHARE_FB_APP_ID_DESC" />
+				
+				<field name="spacer4" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_TITLE" />
+				<field name="facebookShareMeButton" type="radio" class="btn-group" default="1" label="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_BUTTON" description="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_BUTTON_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_HIDE</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_SHOW</option>
+				</field>
+				<field name="facebookShareMeButtonType" type="list" default="core" label="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_BUTTON_TYPE" description="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_BUTTON_TYPE_DESC" >
+				   <option value="core">PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_BUTTON_TYPE_CORE</option>
+				   <option value="custom">PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_BUTTON_TYPE_CUSTOM</option>
+				</field>
+				<field name="facebookShareMeCounter" type="radio" class="btn-group" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_COUNTER" description="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_COUNTER_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_HIDE</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_SHOW</option>
+				</field>
+				<field name="facebookShareMeBadgeText" type="color" default="#FFFFFF" label="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_TEXT_COLOR" description="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_TEXT_COLOR_DESC" />
+				<field name="facebookShareMeBadge" type="color" default="#3B5998" label="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_COLOR" description="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_COLOR_DESC" />
+				<field name="facebookShareMeBadgeLabel" type="text" default="Share" label="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_LABEL" description="PLG_CONTENT_FASTSOCIALSHARE_FB_SHAREME_LABEL_DESC" />
+		
+				<field name="spacer5" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_FASTSOCIALSHARE_TWITTER_TITLE" />
+				<field name="twitterButton" type="radio" class="btn-group" default="1" label="PLG_CONTENT_FASTSOCIALSHARE_TWITTER_BUTTON" description="PLG_CONTENT_FASTSOCIALSHARE_TWITTER_BUTTON_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_HIDE</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_SHOW</option>
+				</field>
+				<field name="twitterName" type="text" default="" size="40" label="PLG_CONTENT_FASTSOCIALSHARE_TWITTER_NAME" description="PLG_CONTENT_FASTSOCIALSHARE_TWITTER_NAME_DESC" />
+				<field name="twitterCounter" type="list" default="horizontal" label="PLG_CONTENT_FASTSOCIALSHARE_TWITTER_COUNTER" description="PLG_CONTENT_FASTSOCIALSHARE_TWITTER_COUNTER_DESC" >
+				   <option value="none">PLG_CONTENT_FASTSOCIALSHARE_HIDE</option>
+				   <option value="vertical">PLG_CONTENT_FASTSOCIALSHARE_TWITTER_VERTICAL</option>
+				   <option value="horizontal">PLG_CONTENT_FASTSOCIALSHARE_TWITTER_HORIZONTAL</option>
+				</field>
+				<field name="twitterSize" type="list" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_TWITTER_SIZE" description="PLG_CONTENT_FASTSOCIALSHARE_TWITTER_SIZE_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_TWITTER_SIZE_NORMAL</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_TWITTER_SIZE_LARGE</option>
+				</field>
+
+				<field name="spacer6" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_FASTSOCIALSHARE_LINKEDIN_TITLE" />
+				<field name="linkedInButton" type="radio" class="btn-group" default="1" label="PLG_CONTENT_FASTSOCIALSHARE_LINKEDIN_BUTTON" description="PLG_CONTENT_FASTSOCIALSHARE_LINKEDIN_BUTTON_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_HIDE</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_SHOW</option>
+				</field>
+				<field name="linkedInType" type="list" default="right" label="PLG_CONTENT_FASTSOCIALSHARE_LINKEDIN_TYPE" description="PLG_CONTENT_FASTSOCIALSHARE_LINKEDIN_TYPE_DESC" >
+				   <option value="none">PLG_CONTENT_FASTSOCIALSHARE_LINKEDIN_COUNTER_NONE</option>
+				   <option value="top">PLG_CONTENT_FASTSOCIALSHARE_LINKEDIN_COUNTER_TOP</option>
+				   <option value="right">PLG_CONTENT_FASTSOCIALSHARE_LINKEDIN_COUNTER_RIGHT</option>
+				</field>  
+		
+				<field name="spacer7" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_FASTSOCIALSHARE_PINTEREST_TITLE"/>
+				<field name="pinterestButton" type="radio" class="btn-group" default="1" label="PLG_CONTENT_FASTSOCIALSHARE_PINTEREST_TITLE_BUTTON" description="PLG_CONTENT_FASTSOCIALSHARE_PINTEREST_TITLE_BUTTON_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_HIDE</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_SHOW</option>
+				</field>
+				
+				<field name="spacer8" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_FASTSOCIALSHARE_WHATSAPP_TITLE" />
+				<field name="whatsappButton" type="radio" class="btn-group" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_WHATSAPP_BUTTON" description="PLG_CONTENT_FASTSOCIALSHARE_WHATSAPP_BUTTON_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_HIDE</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_SHOW</option>
+				</field>
+				<field name="whatsappBadgeText" type="color" default="#FFFFFF" label="PLG_CONTENT_FASTSOCIALSHARE_WHATSAPP_TEXT_COLOR" description="PLG_CONTENT_FASTSOCIALSHARE_WHATSAPP_TEXT_COLOR_DESC" />
+				<field name="whatsappBadge" type="color" default="#25d366" label="PLG_CONTENT_FASTSOCIALSHARE_WHATSAPP_COLOR" description="PLG_CONTENT_FASTSOCIALSHARE_WHATSAPP_COLOR_DESC" />
+				<field name="whatsappBadgeLabel" type="text" default="Whatsapp" label="PLG_CONTENT_FASTSOCIALSHARE_WHATSAPP_LABEL" description="PLG_CONTENT_FASTSOCIALSHARE_WHATSAPP_LABEL_DESC" />
+				
+				<field name="spacer9" type="spacer" class="text badge badge-primary badge-info" label="PLG_CONTENT_FASTSOCIALSHARE_XING_TITLE" />
+				<field name="xingButton" type="radio" class="btn-group" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_XING_BUTTON" description="PLG_CONTENT_FASTSOCIALSHARE_XING_BUTTON_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_HIDE</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_SHOW</option>
+				</field>
+				<field name="xingCounter" type="radio" class="btn-group" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_XING_COUNTER" description="PLG_CONTENT_FASTSOCIALSHARE_XING_COUNTER_DESC" >
+				   <option value="0">PLG_CONTENT_FASTSOCIALSHARE_HIDE</option>
+				   <option value="1">PLG_CONTENT_FASTSOCIALSHARE_SHOW</option>
+				</field>
+				<field name="xingShape" type="list" default="0" label="PLG_CONTENT_FASTSOCIALSHARE_XING_SHAPE" description="PLG_CONTENT_FASTSOCIALSHARE_XING_SHAPE_DESC" >
+				   <option value="rectangular">PLG_CONTENT_FASTSOCIALSHARE_XING_SHAPE_RECTANGULAR</option>
+				   <option value="square">PLG_CONTENT_FASTSOCIALSHARE_XING_SHAPE_SQUARE</option>
+				</field>
+			</fieldset>
+        </fields>
+	</config>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="Fast Social Share Update Server">http://storejextensions.org/updates/fastsocialshare_updater.xml</server>
+	</updateservers>
+</extension>

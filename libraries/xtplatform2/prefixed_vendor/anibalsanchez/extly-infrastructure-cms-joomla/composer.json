@@ -1,0 +1,43 @@
+{
+  "name": "anibalsanchez/extly-infrastructure-cms-joomla",
+  "version": "2.99.9",
+  "description": "Extly Infrastructure CMS Joomla Service",
+  "authors": [
+    {
+      "name": "Extly CB",
+      "email": "team@extly.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Extly\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Extly\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=5.6",
+    "anibalsanchez/extly-infrastructure-cms-contract": "dev-master",
+    "anibalsanchez/extly-infrastructure-support": "dev-master"
+  },
+  "license": "MIT",
+  "repositories": [
+    {
+      "url":
+        "git@github.com:anibalsanchez/extly-infrastructure-support.git",
+      "type": "git"
+    },{
+      "url":
+        "git@github.com:anibalsanchez/extly-infrastructure-cms-contract.git",
+      "type": "git"
+    }
+  ],
+  "require-dev": {
+    "mockery/mockery": "^1.1"
+  }
+}

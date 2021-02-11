@@ -1,0 +1,11 @@
+.row.fl-item-grid-gallery {
+	position: relative;
+	margin-left: -8px;
+	margin-right: -8px;
+}
+.fl-item-grid-gallery .grid-item {
+	padding: 8px;
+}
+.fl-item-grid-gallery .grid-item img {
+	width: 100%;
+}
